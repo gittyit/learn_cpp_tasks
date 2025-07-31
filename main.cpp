@@ -1,13 +1,31 @@
 #include <iostream>
-// 2.2 test
+#include <string.h>
+
+// 2.5.1
 int main() {
-  // Сайт по продаже недвижимости. Переменная содержит стоимость квартиры.
-  int flatPrice = 1000;
-  // Программа для учета товара в обувном магазине. Переменная содержит размер пары обуви.
-  int shoeSize = 42;
-  // Информационная система для посетителей зоопарка. Переменная содержит количество животных, которые находятся в зоопарке в данный момент.
-  int zooAnimalsCount = 100;
-  // Интернет магазин электроники. Переменная для цены нового товара.
-  int newGoodsPrice = 200;
-  std::cout << "Hello World!\n";
+  std::string playerName = "Шумахер";
+  int carSpeed, lapNumber = 4;
+  int carEnginePower = 254;
+  int carWheelsPower = 93;
+  int carSteeringWheelPower = 93;
+  int weatherWindPower = 21, weatherRainPower = 17;
+
+  carSpeed = carEnginePower + carWheelsPower + carSteeringWheelPower - weatherWindPower - weatherRainPower;
+
+  std::cout << "===================\n";
+  std::cout << "Супер гонки. Круг " << lapNumber << "\n";
+  std::cout << "===================\n";
+  std::cout << playerName << " (" << carSpeed << ")\n";
+  std::cout << "===================\n";
+  std::cout << "Водитель: " << playerName << "\n";
+  std::cout << "Скорость: " << carSpeed << "\n";
+  std::cout << "-------------------\n";
+  std::cout << "Оснащение\n";
+  std::cout << "Двигатель: +" << carEnginePower << "\n";
+  std::cout << "Колеса: +" << carWheelsPower << "\n";
+  std::cout << "Руль: +" << carSteeringWheelPower << "\n";
+  std::cout << "-------------------\n";
+  std::cout << "Действия плохой погоды\n";
+  std::cout << "Ветер: -" << weatherWindPower << "\n";
+  std::cout << "Дождь: -" << weatherRainPower << "\n";
 }
