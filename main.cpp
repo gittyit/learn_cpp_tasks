@@ -5,12 +5,12 @@
 int main() {
   std::string playerName = "Шумахер";
   int carSpeed, lapNumber = 4;
-  int carEnginePower = 254;
-  int carWheelsPower = 93;
-  int carSteeringWheelPower = 93;
-  int weatherWindPower = 21, weatherRainPower = 17;
+  int enginePower = 254;
+  int wheelsPower = 93;
+  int steeringWheelPower = 93;
+  int windPower = 21, rainPower = 17;
 
-  carSpeed = carEnginePower + carWheelsPower + carSteeringWheelPower - weatherWindPower - weatherRainPower;
+  carSpeed = enginePower + wheelsPower + steeringWheelPower - windPower - rainPower;
 
   std::cout << "===================\n";
   std::cout << "Супер гонки. Круг " << lapNumber << "\n";
@@ -21,11 +21,11 @@ int main() {
   std::cout << "Скорость: " << carSpeed << "\n";
   std::cout << "-------------------\n";
   std::cout << "Оснащение\n";
-  std::cout << "Двигатель: +" << carEnginePower << "\n";
-  std::cout << "Колеса: +" << carWheelsPower << "\n";
-  std::cout << "Руль: +" << carSteeringWheelPower << "\n";
+  std::cout << "Двигатель: +" << enginePower << "\n";
+  std::cout << "Колеса: +" << wheelsPower << "\n";
+  std::cout << "Руль: +" << steeringWheelPower << "\n";
   std::cout << "-------------------\n";
   std::cout << "Действия плохой погоды\n";
-  std::cout << "Ветер: -" << weatherWindPower << "\n";
-  std::cout << "Дождь: -" << weatherRainPower << "\n";
+  std::cout << "Ветер: -" << windPower << "\n";
+  std::cout << "Дождь: -" << rainPower << "\n";
 }
