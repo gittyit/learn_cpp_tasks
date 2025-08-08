@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string.h>
 
-// 2.5.1 done
+// 2.5.1
 int main() {
   std::string playerName = "Шумахер";
   int carSpeed, lapNumber = 4;
