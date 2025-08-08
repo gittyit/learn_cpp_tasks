@@ -1,6 +1,6 @@
 #include <iostream>
 
-// 2.5.2
+// 2.5.4
 int main() {
   int totalAmount = 4000000, entries = 10, flats = 40,
   costPerFlat;
