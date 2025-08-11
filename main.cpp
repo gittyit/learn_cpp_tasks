@@ -2,26 +2,14 @@
 
 int main() {
 
-  int productCost;
-  int deliveryCost;
-  int discount;
+  std::string user, password;
 
-  int price = productCost + deliveryCost - discount;
-
-  std::cout << "Введите данные для расчета.\n";
-  std::cout << "Стоимость товара: ";
-  std::cin >> productCost;
-  std::cout << "Cтоимость доставки: ";
-  std::cin >> deliveryCost;
-  std::cout << "Скидка: ";
-  std::cin >> discount;
-
-  price = productCost + deliveryCost - discount;
-  std::cout << "\n==== РАСЧЕТ ====\n";
-  std::cout << "Стоимость товара: " << productCost << "\n";
-  std::cout << "Cтоимость доставки: " << deliveryCost << "\n";
-  std::cout << "Скидка: " << discount << "\n";
-  std::cout << "---------\n";
-  std::cout << "Итого: " << price << "\n";
+  std::cout << "Введите логин: ";
+  std::cin >> user;
+  std::cout << "Введите пароль: ";
+  std::cin >> password;
+  
+  std::cout << "-----\n";
+  std::cout << user << ", вы успешно зашли!";
 
 }
