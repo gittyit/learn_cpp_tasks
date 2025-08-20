@@ -2,20 +2,17 @@
 
 int main() {
 
-  int a = 42;
-  int b = 153;
-  int c;
-  
-  std::cout << "a: " << a << "\n";
-  std::cout << "b: " << b << "\n\n";
+  int halfThirdDayLen, beginHeight, dailyGrowth, nightFade;
 
-  std::cout << "Меняем значения.\n\n";
+  std::cout << "Введите данные роста бамбука в см.\n";
+  std::cout << "Начальная высота: "; std::cin >> beginHeight;
+  std::cout << "Ежедневный рост: "; std::cin >> dailyGrowth;
+  std::cout << "Потери ночью: "; std::cin >> nightFade;
 
-  c = a;
-  a = b;
-  b = c;
+  halfThirdDayLen = beginHeight + (dailyGrowth - nightFade) * 2 +
+    dailyGrowth / 2;
 
-  std::cout << "a: " << a << "\n";
-  std::cout << "b: " << b << "\n";
+  std::cout << "--------- Результат ---------\n";
+  std::cout << "Высота бамбука в середине третьего дня: " << halfThirdDayLen << "\n";
 
 }
