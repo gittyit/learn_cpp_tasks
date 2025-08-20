@@ -8,6 +8,9 @@ int main() {
   totalPassNum = 0, grossIncome = 0, netIncome = 0, ticketPrice = 20,
   salary, fuel, taxes, deprecation;
 
+  std::cout << "Программа \"Симулятор маршрутки\".\n";
+  std::cout << "========================================================\n\n";
+  
   std::cout << "-----------Начало маршрута---------\n";
   std::cout << "В салоне пассажиров: " << passNum << "\n";
   std::cout << "Отправляемся на остановку «" << stop1 << "».\n";
