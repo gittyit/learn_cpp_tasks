@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate-complete.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-build.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-configure.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-download.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-install.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-patch.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-test.rule"
+		},
+		{
+			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"curl-populate"
+		],
+		"name" : "curl-populate"
+	}
+}

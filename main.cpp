@@ -1,17 +1,12 @@
 #include <iostream>
+#include <cpr/cpr.h>
 
-// 2.5.2
 int main() {
-  int totalAmount = 0, quantity = 10, price = 50, deliveryCost = 30,
-  discount = 40, goodsCost;
+  int totalAmount = 0;
 
-  goodsCost = quantity * price;
-  totalAmount = goodsCost + deliveryCost - discount;
-
-  std::cout << "Калькулятор для расчёта стоимости товара.\n";
-  std::cout << "Стоимость товара: " << goodsCost << "\n";
-  std::cout << "Стоимость доставки: " << deliveryCost << "\n";
-  std::cout << "Скидка: " << discount << "\n";
-  std::cout << "=========================================\n";
-  std::cout << "Полная стоимость товара: " << totalAmount;
+  cpr::Response r = cpr::Get(cpr::Url("https://httpbin.org/get"));
+  std::cout << "text:\n" << r.text;
+  if (r.status_code == 200) {
+    std::cout << "done\n";
+  }
 }
