@@ -3776,3 +3776,1620 @@ Source file was:
       return t < 0;
     }
 
+Determining if the include file sys/sdt.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E3Vs5g
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_afaba/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_afaba.dir/build.make CMakeFiles/cmTC_afaba.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E3Vs5g'
+Building C object CMakeFiles/cmTC_afaba.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -std=c11 -MD -MT CMakeFiles/cmTC_afaba.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_afaba.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_afaba.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E3Vs5g/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E3Vs5g/CheckIncludeFile.c:1:10: fatal error: 'sys/sdt.h' file not found
+    1 | #include <sys/sdt.h>
+      |          ^~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_afaba.dir/build.make:79: CMakeFiles/cmTC_afaba.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E3Vs5g'
+gmake: *** [Makefile:127: cmTC_afaba/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_XSAVE_INTRIN failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-yBlmff
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a0e95/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a0e95.dir/build.make CMakeFiles/cmTC_a0e95.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-yBlmff'
+Building C object CMakeFiles/cmTC_a0e95.dir/src.c.o
+/usr/bin/clang-17 -DHAVE_XSAVE_INTRIN  -mxsave -std=c11 -MD -MT CMakeFiles/cmTC_a0e95.dir/src.c.o -MF CMakeFiles/cmTC_a0e95.dir/src.c.o.d -o CMakeFiles/cmTC_a0e95.dir/src.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-yBlmff/src.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-yBlmff/src.c:7:21: error: call to undeclared function '_xgetbv'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    7 |              return _xgetbv(0);
+      |                     ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_a0e95.dir/build.make:79: CMakeFiles/cmTC_a0e95.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-yBlmff'
+gmake: *** [Makefile:127: cmTC_a0e95/fast] Error 2
+
+
+Source file was:
+#ifdef _WIN32
+         #  include <intrin.h>
+         #else
+         #  include <x86gprintrin.h>
+         #endif
+         int main(void) {
+             return _xgetbv(0);
+         }
+
+Determining if the function connect exists in the socket failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-V8j4kW
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9d1e5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9d1e5.dir/build.make CMakeFiles/cmTC_9d1e5.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-V8j4kW'
+Building C object CMakeFiles/cmTC_9d1e5.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=connect -MD -MT CMakeFiles/cmTC_9d1e5.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_9d1e5.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_9d1e5.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-V8j4kW/CheckFunctionExists.c"
+Linking C executable cmTC_9d1e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d1e5.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_9d1e5.dir/CheckFunctionExists.c.o -o cmTC_9d1e5  -lsocket 
+/usr/bin/ld: cannot find -lsocket: No such file or directory
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_9d1e5.dir/build.make:100: cmTC_9d1e5] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-V8j4kW'
+gmake: *** [Makefile:127: cmTC_9d1e5/fast] Error 2
+
+
+
+Determining if the OPENSSL_IS_BORINGSSL exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E0y2qF
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1e2bd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1e2bd.dir/build.make CMakeFiles/cmTC_1e2bd.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E0y2qF'
+Building C object CMakeFiles/cmTC_1e2bd.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_1e2bd.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_1e2bd.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_1e2bd.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E0y2qF/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E0y2qF/CheckSymbolExists.c:2:10: fatal error: 'openssl/base.h' file not found
+    2 | #include <openssl/base.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_1e2bd.dir/build.make:79: CMakeFiles/cmTC_1e2bd.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-E0y2qF'
+gmake: *** [Makefile:127: cmTC_1e2bd/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/base.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef OPENSSL_IS_BORINGSSL
+  return ((int*)(&OPENSSL_IS_BORINGSSL))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the OPENSSL_IS_AWSLC exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tNe2Fn
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7d767/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7d767.dir/build.make CMakeFiles/cmTC_7d767.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tNe2Fn'
+Building C object CMakeFiles/cmTC_7d767.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_7d767.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_7d767.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_7d767.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tNe2Fn/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tNe2Fn/CheckSymbolExists.c:2:10: fatal error: 'openssl/base.h' file not found
+    2 | #include <openssl/base.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_7d767.dir/build.make:79: CMakeFiles/cmTC_7d767.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tNe2Fn'
+gmake: *** [Makefile:127: cmTC_7d767/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/base.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef OPENSSL_IS_AWSLC
+  return ((int*)(&OPENSSL_IS_AWSLC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the LIBRESSL_VERSION_NUMBER exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-pu1hQD
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4e2c7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4e2c7.dir/build.make CMakeFiles/cmTC_4e2c7.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-pu1hQD'
+Building C object CMakeFiles/cmTC_4e2c7.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_4e2c7.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_4e2c7.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_4e2c7.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-pu1hQD/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-pu1hQD/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'LIBRESSL_VERSION_NUMBER'
+    8 |   return ((int*)(&LIBRESSL_VERSION_NUMBER))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-pu1hQD/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_4e2c7.dir/build.make:79: CMakeFiles/cmTC_4e2c7.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-pu1hQD'
+gmake: *** [Makefile:127: cmTC_4e2c7/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/opensslv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef LIBRESSL_VERSION_NUMBER
+  return ((int*)(&LIBRESSL_VERSION_NUMBER))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file sys/filio.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-TFoEog
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a548f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a548f.dir/build.make CMakeFiles/cmTC_a548f.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-TFoEog'
+Building C object CMakeFiles/cmTC_a548f.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_a548f.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_a548f.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_a548f.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-TFoEog/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-TFoEog/CheckIncludeFile.c:1:10: fatal error: 'sys/filio.h' file not found
+    1 | #include <sys/filio.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_a548f.dir/build.make:79: CMakeFiles/cmTC_a548f.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-TFoEog'
+gmake: *** [Makefile:127: cmTC_a548f/fast] Error 2
+
+
+
+Determining if the include file sys/sockio.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-v15G7v
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e0e15/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e0e15.dir/build.make CMakeFiles/cmTC_e0e15.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-v15G7v'
+Building C object CMakeFiles/cmTC_e0e15.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_e0e15.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_e0e15.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_e0e15.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-v15G7v/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-v15G7v/CheckIncludeFile.c:1:10: fatal error: 'sys/sockio.h' file not found
+    1 | #include <sys/sockio.h>
+      |          ^~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_e0e15.dir/build.make:79: CMakeFiles/cmTC_e0e15.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-v15G7v'
+gmake: *** [Makefile:127: cmTC_e0e15/fast] Error 2
+
+
+
+Determining if files sys/select.h;sys/socket.h;sys/time.h;sys/types.h;sys/utime.h exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-HSdTur
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f0627/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f0627.dir/build.make CMakeFiles/cmTC_f0627.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-HSdTur'
+Building C object CMakeFiles/cmTC_f0627.dir/HAVE_SYS_UTIME_H.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_f0627.dir/HAVE_SYS_UTIME_H.c.o -MF CMakeFiles/cmTC_f0627.dir/HAVE_SYS_UTIME_H.c.o.d -o CMakeFiles/cmTC_f0627.dir/HAVE_SYS_UTIME_H.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-HSdTur/HAVE_SYS_UTIME_H.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-HSdTur/HAVE_SYS_UTIME_H.c:6:10: fatal error: 'sys/utime.h' file not found
+    6 | #include <sys/utime.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f0627.dir/build.make:79: CMakeFiles/cmTC_f0627.dir/HAVE_SYS_UTIME_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-HSdTur'
+gmake: *** [Makefile:127: cmTC_f0627/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-idWcYN
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_621db/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_621db.dir/build.make CMakeFiles/cmTC_621db.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-idWcYN'
+Building C object CMakeFiles/cmTC_621db.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_621db.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_621db.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_621db.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-idWcYN/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-idWcYN/CheckIncludeFile.c:1:10: fatal error: 'io.h' file not found
+    1 | #include <io.h>
+      |          ^~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_621db.dir/build.make:79: CMakeFiles/cmTC_621db.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-idWcYN'
+gmake: *** [Makefile:127: cmTC_621db/fast] Error 2
+
+
+
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-KYTFlM
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8ef29/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8ef29.dir/build.make CMakeFiles/cmTC_8ef29.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-KYTFlM'
+Building C object CMakeFiles/cmTC_8ef29.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_8ef29.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_8ef29.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8ef29.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-KYTFlM/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-KYTFlM/CheckIncludeFile.c:1:10: fatal error: 'netinet/in6.h' file not found
+    1 | #include <netinet/in6.h>
+      |          ^~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_8ef29.dir/build.make:79: CMakeFiles/cmTC_8ef29.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-KYTFlM'
+gmake: *** [Makefile:127: cmTC_8ef29/fast] Error 2
+
+
+
+Determining if the include file stropts.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-MCnOfC
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8d270/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8d270.dir/build.make CMakeFiles/cmTC_8d270.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-MCnOfC'
+Building C object CMakeFiles/cmTC_8d270.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_8d270.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_8d270.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_8d270.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-MCnOfC/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-MCnOfC/CheckIncludeFile.c:1:10: fatal error: 'stropts.h' file not found
+    1 | #include <stropts.h>
+      |          ^~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_8d270.dir/build.make:79: CMakeFiles/cmTC_8d270.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-MCnOfC'
+gmake: *** [Makefile:127: cmTC_8d270/fast] Error 2
+
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ab42/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9ab42.dir/build.make CMakeFiles/cmTC_9ab42.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB'
+Building C object CMakeFiles/cmTC_9ab42.dir/SIZEOF___INT64.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_9ab42.dir/SIZEOF___INT64.c.o -MF CMakeFiles/cmTC_9ab42.dir/SIZEOF___INT64.c.o.d -o CMakeFiles/cmTC_9ab42.dir/SIZEOF___INT64.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:29:12: error: use of undeclared identifier '__int64'
+   29 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:30:12: error: use of undeclared identifier '__int64'
+   30 |   ('0' + ((SIZE / 1000)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:31:12: error: use of undeclared identifier '__int64'
+   31 |   ('0' + ((SIZE / 100)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:32:12: error: use of undeclared identifier '__int64'
+   32 |   ('0' + ((SIZE / 10)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:33:12: error: use of undeclared identifier '__int64'
+   33 |   ('0' +  (SIZE    % 10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+5 errors generated.
+gmake[1]: *** [CMakeFiles/cmTC_9ab42.dir/build.make:79: CMakeFiles/cmTC_9ab42.dir/SIZEOF___INT64.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-M4pErB'
+gmake: *** [Makefile:127: cmTC_9ab42/fast] Error 2
+
+
+SIZEOF___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the closesocket exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-iTK4fh
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2e140/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2e140.dir/build.make CMakeFiles/cmTC_2e140.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-iTK4fh'
+Building C object CMakeFiles/cmTC_2e140.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_2e140.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_2e140.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_2e140.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-iTK4fh/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-iTK4fh/CheckSymbolExists.c:20:19: error: use of undeclared identifier 'closesocket'
+   20 |   return ((int*)(&closesocket))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-iTK4fh/CheckSymbolExists.c:25:2: warning: no newline at end of file [-Wnewline-eof]
+   25 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_2e140.dir/build.make:79: CMakeFiles/cmTC_2e140.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-iTK4fh'
+gmake: *** [Makefile:127: cmTC_2e140/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <netinet/udp.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function getpass_r exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-RU5waX
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7f255/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7f255.dir/build.make CMakeFiles/cmTC_7f255.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-RU5waX'
+Building C object CMakeFiles/cmTC_7f255.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=getpass_r -MD -MT CMakeFiles/cmTC_7f255.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_7f255.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_7f255.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-RU5waX/CheckFunctionExists.c"
+Linking C executable cmTC_7f255
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f255.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=getpass_r CMakeFiles/cmTC_7f255.dir/CheckFunctionExists.c.o -o cmTC_7f255 
+/usr/bin/ld: CMakeFiles/cmTC_7f255.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x17): undefined reference to `getpass_r'
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_7f255.dir/build.make:100: cmTC_7f255] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-RU5waX'
+gmake: *** [Makefile:127: cmTC_7f255/fast] Error 2
+
+
+
+Determining if the stricmp exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-19uXJ9
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b7556/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b7556.dir/build.make CMakeFiles/cmTC_b7556.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-19uXJ9'
+Building C object CMakeFiles/cmTC_b7556.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_b7556.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_b7556.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b7556.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-19uXJ9/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-19uXJ9/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'stricmp'
+    8 |   return ((int*)(&stricmp))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-19uXJ9/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_b7556.dir/build.make:79: CMakeFiles/cmTC_b7556.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-19uXJ9'
+gmake: *** [Makefile:127: cmTC_b7556/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-VzF0Wg
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_be41e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_be41e.dir/build.make CMakeFiles/cmTC_be41e.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-VzF0Wg'
+Building C object CMakeFiles/cmTC_be41e.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_be41e.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_be41e.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_be41e.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-VzF0Wg/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-VzF0Wg/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'strcmpi'; did you mean 'strcmp'?
+    8 |   return ((int*)(&strcmpi))[argc];
+      |                   ^~~~~~~
+      |                   strcmp
+/usr/include/string.h:156:12: note: 'strcmp' declared here
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-VzF0Wg/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_be41e.dir/build.make:79: CMakeFiles/cmTC_be41e.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-VzF0Wg'
+gmake: *** [Makefile:127: cmTC_be41e/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function setmode exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-njawNj
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d9ce9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d9ce9.dir/build.make CMakeFiles/cmTC_d9ce9.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-njawNj'
+Building C object CMakeFiles/cmTC_d9ce9.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=setmode -MD -MT CMakeFiles/cmTC_d9ce9.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_d9ce9.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_d9ce9.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-njawNj/CheckFunctionExists.c"
+Linking C executable cmTC_d9ce9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9ce9.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=setmode CMakeFiles/cmTC_d9ce9.dir/CheckFunctionExists.c.o -o cmTC_d9ce9 
+/usr/bin/ld: CMakeFiles/cmTC_d9ce9.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x17): undefined reference to `setmode'
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_d9ce9.dir/build.make:100: cmTC_d9ce9] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-njawNj'
+gmake: *** [Makefile:127: cmTC_d9ce9/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_TIME_T_UNSIGNED failed with the following compile output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QfqmK4
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2fc44/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2fc44.dir/build.make CMakeFiles/cmTC_2fc44.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QfqmK4'
+Building C object CMakeFiles/cmTC_2fc44.dir/src.c.o
+/usr/bin/clang-17 -DHAVE_TIME_T_UNSIGNED  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_2fc44.dir/src.c.o -MF CMakeFiles/cmTC_2fc44.dir/src.c.o.d -o CMakeFiles/cmTC_2fc44.dir/src.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QfqmK4/src.c"
+Linking C executable cmTC_2fc44
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fc44.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  CMakeFiles/cmTC_2fc44.dir/src.c.o -o cmTC_2fc44 
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QfqmK4'
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+    #include <time.h>
+    int main(void) {
+      time_t t = -1;
+      return t < 0;
+    }
+
+Determining if the include file sys/sdt.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-ob7Cka
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f3d99/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f3d99.dir/build.make CMakeFiles/cmTC_f3d99.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-ob7Cka'
+Building C object CMakeFiles/cmTC_f3d99.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -std=c11 -MD -MT CMakeFiles/cmTC_f3d99.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_f3d99.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_f3d99.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-ob7Cka/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-ob7Cka/CheckIncludeFile.c:1:10: fatal error: 'sys/sdt.h' file not found
+    1 | #include <sys/sdt.h>
+      |          ^~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f3d99.dir/build.make:79: CMakeFiles/cmTC_f3d99.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-ob7Cka'
+gmake: *** [Makefile:127: cmTC_f3d99/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_XSAVE_INTRIN failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-lWvktK
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ff9ec/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ff9ec.dir/build.make CMakeFiles/cmTC_ff9ec.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-lWvktK'
+Building C object CMakeFiles/cmTC_ff9ec.dir/src.c.o
+/usr/bin/clang-17 -DHAVE_XSAVE_INTRIN  -mxsave -std=c11 -MD -MT CMakeFiles/cmTC_ff9ec.dir/src.c.o -MF CMakeFiles/cmTC_ff9ec.dir/src.c.o.d -o CMakeFiles/cmTC_ff9ec.dir/src.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-lWvktK/src.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-lWvktK/src.c:7:21: error: call to undeclared function '_xgetbv'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    7 |              return _xgetbv(0);
+      |                     ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ff9ec.dir/build.make:79: CMakeFiles/cmTC_ff9ec.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-lWvktK'
+gmake: *** [Makefile:127: cmTC_ff9ec/fast] Error 2
+
+
+Source file was:
+#ifdef _WIN32
+         #  include <intrin.h>
+         #else
+         #  include <x86gprintrin.h>
+         #endif
+         int main(void) {
+             return _xgetbv(0);
+         }
+
+Determining if the function connect exists in the socket failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XiUbhi
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_576ba/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_576ba.dir/build.make CMakeFiles/cmTC_576ba.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XiUbhi'
+Building C object CMakeFiles/cmTC_576ba.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=connect -MD -MT CMakeFiles/cmTC_576ba.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_576ba.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_576ba.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XiUbhi/CheckFunctionExists.c"
+Linking C executable cmTC_576ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_576ba.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_576ba.dir/CheckFunctionExists.c.o -o cmTC_576ba  -lsocket 
+/usr/bin/ld: cannot find -lsocket: No such file or directory
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_576ba.dir/build.make:100: cmTC_576ba] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XiUbhi'
+gmake: *** [Makefile:127: cmTC_576ba/fast] Error 2
+
+
+
+Determining if the OPENSSL_IS_BORINGSSL exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7lIuhP
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ee8b2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ee8b2.dir/build.make CMakeFiles/cmTC_ee8b2.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7lIuhP'
+Building C object CMakeFiles/cmTC_ee8b2.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_ee8b2.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_ee8b2.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_ee8b2.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7lIuhP/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7lIuhP/CheckSymbolExists.c:2:10: fatal error: 'openssl/base.h' file not found
+    2 | #include <openssl/base.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ee8b2.dir/build.make:79: CMakeFiles/cmTC_ee8b2.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7lIuhP'
+gmake: *** [Makefile:127: cmTC_ee8b2/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/base.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef OPENSSL_IS_BORINGSSL
+  return ((int*)(&OPENSSL_IS_BORINGSSL))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the OPENSSL_IS_AWSLC exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7DYD3O
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b2823/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b2823.dir/build.make CMakeFiles/cmTC_b2823.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7DYD3O'
+Building C object CMakeFiles/cmTC_b2823.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_b2823.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_b2823.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b2823.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7DYD3O/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7DYD3O/CheckSymbolExists.c:2:10: fatal error: 'openssl/base.h' file not found
+    2 | #include <openssl/base.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_b2823.dir/build.make:79: CMakeFiles/cmTC_b2823.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-7DYD3O'
+gmake: *** [Makefile:127: cmTC_b2823/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/base.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef OPENSSL_IS_AWSLC
+  return ((int*)(&OPENSSL_IS_AWSLC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the LIBRESSL_VERSION_NUMBER exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-fw0J0x
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d1167/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d1167.dir/build.make CMakeFiles/cmTC_d1167.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-fw0J0x'
+Building C object CMakeFiles/cmTC_d1167.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_d1167.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d1167.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d1167.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-fw0J0x/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-fw0J0x/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'LIBRESSL_VERSION_NUMBER'
+    8 |   return ((int*)(&LIBRESSL_VERSION_NUMBER))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-fw0J0x/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_d1167.dir/build.make:79: CMakeFiles/cmTC_d1167.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-fw0J0x'
+gmake: *** [Makefile:127: cmTC_d1167/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/opensslv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef LIBRESSL_VERSION_NUMBER
+  return ((int*)(&LIBRESSL_VERSION_NUMBER))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file sys/filio.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QQajgx
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4eb85/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4eb85.dir/build.make CMakeFiles/cmTC_4eb85.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QQajgx'
+Building C object CMakeFiles/cmTC_4eb85.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_4eb85.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_4eb85.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_4eb85.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QQajgx/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QQajgx/CheckIncludeFile.c:1:10: fatal error: 'sys/filio.h' file not found
+    1 | #include <sys/filio.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_4eb85.dir/build.make:79: CMakeFiles/cmTC_4eb85.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-QQajgx'
+gmake: *** [Makefile:127: cmTC_4eb85/fast] Error 2
+
+
+
+Determining if the include file sys/sockio.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Hfnucz
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_06833/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_06833.dir/build.make CMakeFiles/cmTC_06833.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Hfnucz'
+Building C object CMakeFiles/cmTC_06833.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_06833.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_06833.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_06833.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Hfnucz/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Hfnucz/CheckIncludeFile.c:1:10: fatal error: 'sys/sockio.h' file not found
+    1 | #include <sys/sockio.h>
+      |          ^~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_06833.dir/build.make:79: CMakeFiles/cmTC_06833.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Hfnucz'
+gmake: *** [Makefile:127: cmTC_06833/fast] Error 2
+
+
+
+Determining if files sys/select.h;sys/socket.h;sys/time.h;sys/types.h;sys/utime.h exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rCRUj4
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bcbc8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bcbc8.dir/build.make CMakeFiles/cmTC_bcbc8.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rCRUj4'
+Building C object CMakeFiles/cmTC_bcbc8.dir/HAVE_SYS_UTIME_H.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_bcbc8.dir/HAVE_SYS_UTIME_H.c.o -MF CMakeFiles/cmTC_bcbc8.dir/HAVE_SYS_UTIME_H.c.o.d -o CMakeFiles/cmTC_bcbc8.dir/HAVE_SYS_UTIME_H.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rCRUj4/HAVE_SYS_UTIME_H.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rCRUj4/HAVE_SYS_UTIME_H.c:6:10: fatal error: 'sys/utime.h' file not found
+    6 | #include <sys/utime.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_bcbc8.dir/build.make:79: CMakeFiles/cmTC_bcbc8.dir/HAVE_SYS_UTIME_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rCRUj4'
+gmake: *** [Makefile:127: cmTC_bcbc8/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tzpHEO
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_872e2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_872e2.dir/build.make CMakeFiles/cmTC_872e2.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tzpHEO'
+Building C object CMakeFiles/cmTC_872e2.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_872e2.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_872e2.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_872e2.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tzpHEO/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tzpHEO/CheckIncludeFile.c:1:10: fatal error: 'io.h' file not found
+    1 | #include <io.h>
+      |          ^~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_872e2.dir/build.make:79: CMakeFiles/cmTC_872e2.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-tzpHEO'
+gmake: *** [Makefile:127: cmTC_872e2/fast] Error 2
+
+
+
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XAaJFN
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_71f2f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_71f2f.dir/build.make CMakeFiles/cmTC_71f2f.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XAaJFN'
+Building C object CMakeFiles/cmTC_71f2f.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_71f2f.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_71f2f.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_71f2f.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XAaJFN/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XAaJFN/CheckIncludeFile.c:1:10: fatal error: 'netinet/in6.h' file not found
+    1 | #include <netinet/in6.h>
+      |          ^~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_71f2f.dir/build.make:79: CMakeFiles/cmTC_71f2f.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XAaJFN'
+gmake: *** [Makefile:127: cmTC_71f2f/fast] Error 2
+
+
+
+Determining if the include file stropts.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vTuIeT
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_03345/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_03345.dir/build.make CMakeFiles/cmTC_03345.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vTuIeT'
+Building C object CMakeFiles/cmTC_03345.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_03345.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_03345.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_03345.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vTuIeT/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vTuIeT/CheckIncludeFile.c:1:10: fatal error: 'stropts.h' file not found
+    1 | #include <stropts.h>
+      |          ^~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_03345.dir/build.make:79: CMakeFiles/cmTC_03345.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vTuIeT'
+gmake: *** [Makefile:127: cmTC_03345/fast] Error 2
+
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1214e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1214e.dir/build.make CMakeFiles/cmTC_1214e.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg'
+Building C object CMakeFiles/cmTC_1214e.dir/SIZEOF___INT64.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_1214e.dir/SIZEOF___INT64.c.o -MF CMakeFiles/cmTC_1214e.dir/SIZEOF___INT64.c.o.d -o CMakeFiles/cmTC_1214e.dir/SIZEOF___INT64.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:29:12: error: use of undeclared identifier '__int64'
+   29 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:30:12: error: use of undeclared identifier '__int64'
+   30 |   ('0' + ((SIZE / 1000)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:31:12: error: use of undeclared identifier '__int64'
+   31 |   ('0' + ((SIZE / 100)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:32:12: error: use of undeclared identifier '__int64'
+   32 |   ('0' + ((SIZE / 10)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:33:12: error: use of undeclared identifier '__int64'
+   33 |   ('0' +  (SIZE    % 10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+5 errors generated.
+gmake[1]: *** [CMakeFiles/cmTC_1214e.dir/build.make:79: CMakeFiles/cmTC_1214e.dir/SIZEOF___INT64.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Gtq1Bg'
+gmake: *** [Makefile:127: cmTC_1214e/fast] Error 2
+
+
+SIZEOF___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the closesocket exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Ev1Fjc
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b9349/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b9349.dir/build.make CMakeFiles/cmTC_b9349.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Ev1Fjc'
+Building C object CMakeFiles/cmTC_b9349.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_b9349.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_b9349.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b9349.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Ev1Fjc/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Ev1Fjc/CheckSymbolExists.c:20:19: error: use of undeclared identifier 'closesocket'
+   20 |   return ((int*)(&closesocket))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Ev1Fjc/CheckSymbolExists.c:25:2: warning: no newline at end of file [-Wnewline-eof]
+   25 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_b9349.dir/build.make:79: CMakeFiles/cmTC_b9349.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-Ev1Fjc'
+gmake: *** [Makefile:127: cmTC_b9349/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <netinet/udp.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function getpass_r exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3pu0s9
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5cb43/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5cb43.dir/build.make CMakeFiles/cmTC_5cb43.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3pu0s9'
+Building C object CMakeFiles/cmTC_5cb43.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=getpass_r -MD -MT CMakeFiles/cmTC_5cb43.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_5cb43.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_5cb43.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3pu0s9/CheckFunctionExists.c"
+Linking C executable cmTC_5cb43
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cb43.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=getpass_r CMakeFiles/cmTC_5cb43.dir/CheckFunctionExists.c.o -o cmTC_5cb43 
+/usr/bin/ld: CMakeFiles/cmTC_5cb43.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x17): undefined reference to `getpass_r'
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_5cb43.dir/build.make:100: cmTC_5cb43] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3pu0s9'
+gmake: *** [Makefile:127: cmTC_5cb43/fast] Error 2
+
+
+
+Determining if the stricmp exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-kuYltD
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_24b2f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_24b2f.dir/build.make CMakeFiles/cmTC_24b2f.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-kuYltD'
+Building C object CMakeFiles/cmTC_24b2f.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_24b2f.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_24b2f.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_24b2f.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-kuYltD/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-kuYltD/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'stricmp'
+    8 |   return ((int*)(&stricmp))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-kuYltD/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_24b2f.dir/build.make:79: CMakeFiles/cmTC_24b2f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-kuYltD'
+gmake: *** [Makefile:127: cmTC_24b2f/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-stXWNo
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2574a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2574a.dir/build.make CMakeFiles/cmTC_2574a.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-stXWNo'
+Building C object CMakeFiles/cmTC_2574a.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_2574a.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_2574a.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_2574a.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-stXWNo/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-stXWNo/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'strcmpi'; did you mean 'strcmp'?
+    8 |   return ((int*)(&strcmpi))[argc];
+      |                   ^~~~~~~
+      |                   strcmp
+/usr/include/string.h:156:12: note: 'strcmp' declared here
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-stXWNo/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_2574a.dir/build.make:79: CMakeFiles/cmTC_2574a.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-stXWNo'
+gmake: *** [Makefile:127: cmTC_2574a/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function setmode exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-T6KuVt
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b3ce8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b3ce8.dir/build.make CMakeFiles/cmTC_b3ce8.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-T6KuVt'
+Building C object CMakeFiles/cmTC_b3ce8.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=setmode -MD -MT CMakeFiles/cmTC_b3ce8.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_b3ce8.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_b3ce8.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-T6KuVt/CheckFunctionExists.c"
+Linking C executable cmTC_b3ce8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3ce8.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=setmode CMakeFiles/cmTC_b3ce8.dir/CheckFunctionExists.c.o -o cmTC_b3ce8 
+/usr/bin/ld: CMakeFiles/cmTC_b3ce8.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x17): undefined reference to `setmode'
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_b3ce8.dir/build.make:100: cmTC_b3ce8] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-T6KuVt'
+gmake: *** [Makefile:127: cmTC_b3ce8/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_TIME_T_UNSIGNED failed with the following compile output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-2OkH88
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_045be/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_045be.dir/build.make CMakeFiles/cmTC_045be.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-2OkH88'
+Building C object CMakeFiles/cmTC_045be.dir/src.c.o
+/usr/bin/clang-17 -DHAVE_TIME_T_UNSIGNED  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_045be.dir/src.c.o -MF CMakeFiles/cmTC_045be.dir/src.c.o.d -o CMakeFiles/cmTC_045be.dir/src.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-2OkH88/src.c"
+Linking C executable cmTC_045be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_045be.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  CMakeFiles/cmTC_045be.dir/src.c.o -o cmTC_045be 
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-2OkH88'
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+    #include <time.h>
+    int main(void) {
+      time_t t = -1;
+      return t < 0;
+    }
+
+Determining if the include file sys/sdt.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-wqOS9d
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_389f2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_389f2.dir/build.make CMakeFiles/cmTC_389f2.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-wqOS9d'
+Building C object CMakeFiles/cmTC_389f2.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -std=c11 -MD -MT CMakeFiles/cmTC_389f2.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_389f2.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_389f2.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-wqOS9d/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-wqOS9d/CheckIncludeFile.c:1:10: fatal error: 'sys/sdt.h' file not found
+    1 | #include <sys/sdt.h>
+      |          ^~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_389f2.dir/build.make:79: CMakeFiles/cmTC_389f2.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-wqOS9d'
+gmake: *** [Makefile:127: cmTC_389f2/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_XSAVE_INTRIN failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-FY908s
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a0865/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a0865.dir/build.make CMakeFiles/cmTC_a0865.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-FY908s'
+Building C object CMakeFiles/cmTC_a0865.dir/src.c.o
+/usr/bin/clang-17 -DHAVE_XSAVE_INTRIN  -mxsave -std=c11 -MD -MT CMakeFiles/cmTC_a0865.dir/src.c.o -MF CMakeFiles/cmTC_a0865.dir/src.c.o.d -o CMakeFiles/cmTC_a0865.dir/src.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-FY908s/src.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-FY908s/src.c:7:21: error: call to undeclared function '_xgetbv'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+    7 |              return _xgetbv(0);
+      |                     ^
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_a0865.dir/build.make:79: CMakeFiles/cmTC_a0865.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-FY908s'
+gmake: *** [Makefile:127: cmTC_a0865/fast] Error 2
+
+
+Source file was:
+#ifdef _WIN32
+         #  include <intrin.h>
+         #else
+         #  include <x86gprintrin.h>
+         #endif
+         int main(void) {
+             return _xgetbv(0);
+         }
+
+Determining if the function connect exists in the socket failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0vW7lx
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_477c6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_477c6.dir/build.make CMakeFiles/cmTC_477c6.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0vW7lx'
+Building C object CMakeFiles/cmTC_477c6.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=connect -MD -MT CMakeFiles/cmTC_477c6.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_477c6.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_477c6.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0vW7lx/CheckFunctionExists.c"
+Linking C executable cmTC_477c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_477c6.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_477c6.dir/CheckFunctionExists.c.o -o cmTC_477c6  -lsocket 
+/usr/bin/ld: cannot find -lsocket: No such file or directory
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_477c6.dir/build.make:100: cmTC_477c6] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0vW7lx'
+gmake: *** [Makefile:127: cmTC_477c6/fast] Error 2
+
+
+
+Determining if the OPENSSL_IS_BORINGSSL exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-mTPWIn
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a1d74/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a1d74.dir/build.make CMakeFiles/cmTC_a1d74.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-mTPWIn'
+Building C object CMakeFiles/cmTC_a1d74.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_a1d74.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_a1d74.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_a1d74.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-mTPWIn/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-mTPWIn/CheckSymbolExists.c:2:10: fatal error: 'openssl/base.h' file not found
+    2 | #include <openssl/base.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_a1d74.dir/build.make:79: CMakeFiles/cmTC_a1d74.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-mTPWIn'
+gmake: *** [Makefile:127: cmTC_a1d74/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/base.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef OPENSSL_IS_BORINGSSL
+  return ((int*)(&OPENSSL_IS_BORINGSSL))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the OPENSSL_IS_AWSLC exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0Wd2hB
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d4d03/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d4d03.dir/build.make CMakeFiles/cmTC_d4d03.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0Wd2hB'
+Building C object CMakeFiles/cmTC_d4d03.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_d4d03.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d4d03.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d4d03.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0Wd2hB/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0Wd2hB/CheckSymbolExists.c:2:10: fatal error: 'openssl/base.h' file not found
+    2 | #include <openssl/base.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_d4d03.dir/build.make:79: CMakeFiles/cmTC_d4d03.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-0Wd2hB'
+gmake: *** [Makefile:127: cmTC_d4d03/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/base.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef OPENSSL_IS_AWSLC
+  return ((int*)(&OPENSSL_IS_AWSLC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the LIBRESSL_VERSION_NUMBER exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rXLpxB
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_259bd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_259bd.dir/build.make CMakeFiles/cmTC_259bd.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rXLpxB'
+Building C object CMakeFiles/cmTC_259bd.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_259bd.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_259bd.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_259bd.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rXLpxB/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rXLpxB/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'LIBRESSL_VERSION_NUMBER'
+    8 |   return ((int*)(&LIBRESSL_VERSION_NUMBER))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rXLpxB/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_259bd.dir/build.make:79: CMakeFiles/cmTC_259bd.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-rXLpxB'
+gmake: *** [Makefile:127: cmTC_259bd/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <openssl/opensslv.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef LIBRESSL_VERSION_NUMBER
+  return ((int*)(&LIBRESSL_VERSION_NUMBER))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file sys/filio.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-oupKyP
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9d504/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9d504.dir/build.make CMakeFiles/cmTC_9d504.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-oupKyP'
+Building C object CMakeFiles/cmTC_9d504.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_9d504.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_9d504.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_9d504.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-oupKyP/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-oupKyP/CheckIncludeFile.c:1:10: fatal error: 'sys/filio.h' file not found
+    1 | #include <sys/filio.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_9d504.dir/build.make:79: CMakeFiles/cmTC_9d504.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-oupKyP'
+gmake: *** [Makefile:127: cmTC_9d504/fast] Error 2
+
+
+
+Determining if the include file sys/sockio.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-R4wfPB
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_869bb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_869bb.dir/build.make CMakeFiles/cmTC_869bb.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-R4wfPB'
+Building C object CMakeFiles/cmTC_869bb.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_869bb.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_869bb.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_869bb.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-R4wfPB/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-R4wfPB/CheckIncludeFile.c:1:10: fatal error: 'sys/sockio.h' file not found
+    1 | #include <sys/sockio.h>
+      |          ^~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_869bb.dir/build.make:79: CMakeFiles/cmTC_869bb.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-R4wfPB'
+gmake: *** [Makefile:127: cmTC_869bb/fast] Error 2
+
+
+
+Determining if files sys/select.h;sys/socket.h;sys/time.h;sys/types.h;sys/utime.h exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vn86A7
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_24cd5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_24cd5.dir/build.make CMakeFiles/cmTC_24cd5.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vn86A7'
+Building C object CMakeFiles/cmTC_24cd5.dir/HAVE_SYS_UTIME_H.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_24cd5.dir/HAVE_SYS_UTIME_H.c.o -MF CMakeFiles/cmTC_24cd5.dir/HAVE_SYS_UTIME_H.c.o.d -o CMakeFiles/cmTC_24cd5.dir/HAVE_SYS_UTIME_H.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vn86A7/HAVE_SYS_UTIME_H.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vn86A7/HAVE_SYS_UTIME_H.c:6:10: fatal error: 'sys/utime.h' file not found
+    6 | #include <sys/utime.h>
+      |          ^~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_24cd5.dir/build.make:79: CMakeFiles/cmTC_24cd5.dir/HAVE_SYS_UTIME_H.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-vn86A7'
+gmake: *** [Makefile:127: cmTC_24cd5/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-nVWFHE
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7202c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7202c.dir/build.make CMakeFiles/cmTC_7202c.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-nVWFHE'
+Building C object CMakeFiles/cmTC_7202c.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_7202c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_7202c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_7202c.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-nVWFHE/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-nVWFHE/CheckIncludeFile.c:1:10: fatal error: 'io.h' file not found
+    1 | #include <io.h>
+      |          ^~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_7202c.dir/build.make:79: CMakeFiles/cmTC_7202c.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-nVWFHE'
+gmake: *** [Makefile:127: cmTC_7202c/fast] Error 2
+
+
+
+Determining if the include file netinet/in6.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-EMaVPs
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ff4c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9ff4c.dir/build.make CMakeFiles/cmTC_9ff4c.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-EMaVPs'
+Building C object CMakeFiles/cmTC_9ff4c.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_9ff4c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_9ff4c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_9ff4c.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-EMaVPs/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-EMaVPs/CheckIncludeFile.c:1:10: fatal error: 'netinet/in6.h' file not found
+    1 | #include <netinet/in6.h>
+      |          ^~~~~~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_9ff4c.dir/build.make:79: CMakeFiles/cmTC_9ff4c.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-EMaVPs'
+gmake: *** [Makefile:127: cmTC_9ff4c/fast] Error 2
+
+
+
+Determining if the include file stropts.h exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-q5IXoA
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0eff3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0eff3.dir/build.make CMakeFiles/cmTC_0eff3.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-q5IXoA'
+Building C object CMakeFiles/cmTC_0eff3.dir/CheckIncludeFile.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_0eff3.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_0eff3.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_0eff3.dir/CheckIncludeFile.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-q5IXoA/CheckIncludeFile.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-q5IXoA/CheckIncludeFile.c:1:10: fatal error: 'stropts.h' file not found
+    1 | #include <stropts.h>
+      |          ^~~~~~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_0eff3.dir/build.make:79: CMakeFiles/cmTC_0eff3.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-q5IXoA'
+gmake: *** [Makefile:127: cmTC_0eff3/fast] Error 2
+
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d403a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d403a.dir/build.make CMakeFiles/cmTC_d403a.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW'
+Building C object CMakeFiles/cmTC_d403a.dir/SIZEOF___INT64.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_d403a.dir/SIZEOF___INT64.c.o -MF CMakeFiles/cmTC_d403a.dir/SIZEOF___INT64.c.o.d -o CMakeFiles/cmTC_d403a.dir/SIZEOF___INT64.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:29:12: error: use of undeclared identifier '__int64'
+   29 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:30:12: error: use of undeclared identifier '__int64'
+   30 |   ('0' + ((SIZE / 1000)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:31:12: error: use of undeclared identifier '__int64'
+   31 |   ('0' + ((SIZE / 100)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:32:12: error: use of undeclared identifier '__int64'
+   32 |   ('0' + ((SIZE / 10)%10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:33:12: error: use of undeclared identifier '__int64'
+   33 |   ('0' +  (SIZE    % 10)),
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW/SIZEOF___INT64.c:27:22: note: expanded from macro 'SIZE'
+   27 | #define SIZE (sizeof(__int64))
+      |                      ^
+5 errors generated.
+gmake[1]: *** [CMakeFiles/cmTC_d403a.dir/build.make:79: CMakeFiles/cmTC_d403a.dir/SIZEOF___INT64.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-S5QfRW'
+gmake: *** [Makefile:127: cmTC_d403a/fast] Error 2
+
+
+SIZEOF___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the closesocket exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XG140H
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cfec9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cfec9.dir/build.make CMakeFiles/cmTC_cfec9.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XG140H'
+Building C object CMakeFiles/cmTC_cfec9.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_cfec9.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_cfec9.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_cfec9.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XG140H/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XG140H/CheckSymbolExists.c:20:19: error: use of undeclared identifier 'closesocket'
+   20 |   return ((int*)(&closesocket))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XG140H/CheckSymbolExists.c:25:2: warning: no newline at end of file [-Wnewline-eof]
+   25 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_cfec9.dir/build.make:79: CMakeFiles/cmTC_cfec9.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-XG140H'
+gmake: *** [Makefile:127: cmTC_cfec9/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <netinet/udp.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function getpass_r exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-miIwMs
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6b108/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6b108.dir/build.make CMakeFiles/cmTC_6b108.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-miIwMs'
+Building C object CMakeFiles/cmTC_6b108.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=getpass_r -MD -MT CMakeFiles/cmTC_6b108.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_6b108.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_6b108.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-miIwMs/CheckFunctionExists.c"
+Linking C executable cmTC_6b108
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b108.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=getpass_r CMakeFiles/cmTC_6b108.dir/CheckFunctionExists.c.o -o cmTC_6b108 
+/usr/bin/ld: CMakeFiles/cmTC_6b108.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x17): undefined reference to `getpass_r'
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_6b108.dir/build.make:100: cmTC_6b108] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-miIwMs'
+gmake: *** [Makefile:127: cmTC_6b108/fast] Error 2
+
+
+
+Determining if the stricmp exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3RvrbW
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b1503/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b1503.dir/build.make CMakeFiles/cmTC_b1503.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3RvrbW'
+Building C object CMakeFiles/cmTC_b1503.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_b1503.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_b1503.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_b1503.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3RvrbW/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3RvrbW/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'stricmp'
+    8 |   return ((int*)(&stricmp))[argc];
+      |                   ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3RvrbW/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_b1503.dir/build.make:79: CMakeFiles/cmTC_b1503.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-3RvrbW'
+gmake: *** [Makefile:127: cmTC_b1503/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-b0459H
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9157c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9157c.dir/build.make CMakeFiles/cmTC_9157c.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-b0459H'
+Building C object CMakeFiles/cmTC_9157c.dir/CheckSymbolExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_9157c.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_9157c.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_9157c.dir/CheckSymbolExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-b0459H/CheckSymbolExists.c"
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-b0459H/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'strcmpi'; did you mean 'strcmp'?
+    8 |   return ((int*)(&strcmpi))[argc];
+      |                   ^~~~~~~
+      |                   strcmp
+/usr/include/string.h:156:12: note: 'strcmp' declared here
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^
+/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-b0459H/CheckSymbolExists.c:13:2: warning: no newline at end of file [-Wnewline-eof]
+   13 | }
+      |  ^
+1 warning and 1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_9157c.dir/build.make:79: CMakeFiles/cmTC_9157c.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-b0459H'
+gmake: *** [Makefile:127: cmTC_9157c/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function setmode exists failed with the following output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-YCljFQ
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_35ea8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_35ea8.dir/build.make CMakeFiles/cmTC_35ea8.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-YCljFQ'
+Building C object CMakeFiles/cmTC_35ea8.dir/CheckFunctionExists.c.o
+/usr/bin/clang-17   -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=setmode -MD -MT CMakeFiles/cmTC_35ea8.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_35ea8.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_35ea8.dir/CheckFunctionExists.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-YCljFQ/CheckFunctionExists.c"
+Linking C executable cmTC_35ea8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35ea8.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE -DCHECK_FUNCTION_EXISTS=setmode CMakeFiles/cmTC_35ea8.dir/CheckFunctionExists.c.o -o cmTC_35ea8 
+/usr/bin/ld: CMakeFiles/cmTC_35ea8.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x17): undefined reference to `setmode'
+clang-17: error: linker command failed with exit code 1 (use -v to see invocation)
+gmake[1]: *** [CMakeFiles/cmTC_35ea8.dir/build.make:100: cmTC_35ea8] Error 1
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-YCljFQ'
+gmake: *** [Makefile:127: cmTC_35ea8/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_TIME_T_UNSIGNED failed with the following compile output:
+Change Dir: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-1Isz9E
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_86a99/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_86a99.dir/build.make CMakeFiles/cmTC_86a99.dir/build
+gmake[1]: Entering directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-1Isz9E'
+Building C object CMakeFiles/cmTC_86a99.dir/src.c.o
+/usr/bin/clang-17 -DHAVE_TIME_T_UNSIGNED  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  -MD -MT CMakeFiles/cmTC_86a99.dir/src.c.o -MF CMakeFiles/cmTC_86a99.dir/src.c.o.d -o CMakeFiles/cmTC_86a99.dir/src.c.o -c "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-1Isz9E/src.c"
+Linking C executable cmTC_86a99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86a99.dir/link.txt --verbose=1
+/usr/bin/clang-17  -Werror-implicit-function-declaration -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wcast-qual -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wold-style-definition -Wredundant-decls -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wformat=2 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wheader-guard -Wpragmas -Wsometimes-uninitialized -Wunused-const-variable -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -Wimplicit-fallthrough -D_GNU_SOURCE  CMakeFiles/cmTC_86a99.dir/src.c.o -o cmTC_86a99 
+gmake[1]: Leaving directory '/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/Clang 17.0.6 x86_64-pc-linux-gnu/CMakeFiles/CMakeScratch/TryCompile-1Isz9E'
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+    #include <time.h>
+    int main(void) {
+      time_t t = -1;
+      return t < 0;
+    }
+
