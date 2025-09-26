@@ -4,20 +4,25 @@ int main() {
 
   int a = 42;
   int b = 153;
-  int c;
+  std::string result;
   
-  std::cout << "Программа обмена значений переменных местами.\n";
+  std::cout << "Минимум из двух чисел.\n";
   std::cout << "========================================================\n\n";
-  std::cout << "a: " << a << "\n";
-  std::cout << "b: " << b << "\n\n";
+  std::cout << "Введите первое число: ";
+  std::cin >> a;
+  std::cout << "Введите второе число: ";
+  std::cin >> b;
 
-  std::cout << "Меняем значения.\n\n";
+  std::cout << "\n-----Проверяем-----\n\n";
 
-  c = a;
-  a = b;
-  b = c;
+  if (a == b) {
+    std::cout << "Числа равны!\n";
+  } else if (a > b) {
+    std::cout << "Наименьшее число: " << b;
+  } else if (a < b) {
+    std::cout << "Наименьшее число: " << a;
+  }
 
-  std::cout << "a: " << a << "\n";
-  std::cout << "b: " << b << "\n";
+  std::cout << std::endl << std::endl;
 
 }
