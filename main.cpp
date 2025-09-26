@@ -3,28 +3,21 @@
 int main() {
 
   int a = 0;
-  int b = 0;
-  int sum = 0;
-  int res = 0;
-  std::string result;
+  int res;
   
-  std::cout << "Складываем в уме.\n";
+  std::cout << "Проверка на чётное число.\n";
   std::cout << "========================================================\n\n";
-  std::cout << "Введите первое число: ";
+  std::cout << "Введите число: ";
   std::cin >> a;
-  std::cout << "Введите второе число: ";
-  std::cin >> b;
-  std::cout << "Введите их сумму: ";
-  std::cin >> sum;
 
   std::cout << "\n-----Проверяем-----\n\n";
   
-  res = a + b;
+  res = a % 2;
 
-  if (sum == res) {
-    std::cout << "Верно!\n";
+  if (res == 0) {
+    std::cout << "Число " << a << " — чётное\n";
   } else {
-    std::cout << "Ошибка! Верный результат: " << res;
+    std::cout << "Число " << a << " — нечётное\n";
   }
 
   std::cout << std::endl << std::endl;
