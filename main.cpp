@@ -2,32 +2,29 @@
 
 int main() {
 
-  int a = 0, b = 0;
-  int res = 0;
+  int mansCount, mansPerDay;
+  int barbersCount, mansPerBarber;
+  int requiredBarbersCount;
+
+  std::cout << "************** Барбершоп-калькулятор **************\n";
+  std::cout << "Введите число мужчин в городе: ";
+  std::cin >> mansCount;
+
+  std::cout << "Сколько уже барберов удалось нанять? ";
+  std::cin >> barbersCount;
+
+  // Сколько человек нужно постричь за день?
+  mansPerDay = mansCount / 30;
+  // Сколько человек может постричь один барбер за одну смену?
+  mansPerBarber = 8; // один человек в час, смена 8 часов
+  requiredBarbersCount = mansPerDay / mansPerBarber;
+
+  std::cout << "Необходимое число барберов: " << requiredBarbersCount << "\n";
   
-  std::cout << "Кратность числа.\n";
-  std::cout << "========================================================\n\n";
-  std::cout << "Введите первое число: ";
-  std::cin >> a;
-  std::cout << "Введите второе число: ";
-  std::cin >> b;
-
-  std::cout << "\n-----Считаем-----\n\n";
-
-  if (a == 0) {
-    std::cout << "Вы ввели неверное число: " << a << "\n\n";
-    return 0;
-  } else if (b == 0) {
-    std::cout << "Вы ввели неверное число: " << b << "\n\n";
-    return 0;
-  }
-
-  res = a % b;
-
-  if (res == 0) {
-    std::cout << "Да, " << a << " делится на " << b << " без остатка!";
+  if (requiredBarbersCount > barbersCount){
+      std::cout << "Нужно больше барберов!!!\n";
   } else {
-    std::cout << "Нет, " << a << " не делится на " << b << " без остатка!";
+      std::cout << "Барберов хватает!!!\n";
   }
 
   std::cout << std::endl << std::endl;
