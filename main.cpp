@@ -2,31 +2,34 @@
 
 int main() {
 
-  int score = 0;
-  int level = 0;
+  int a = 0, b = 0;
+  int res = 0;
   
-  std::cout << "Калькулятор опыта.\n";
+  std::cout << "Кратность числа.\n";
   std::cout << "========================================================\n\n";
-  std::cout << "Введите число очков опыта: ";
-  std::cin >> score;
+  std::cout << "Введите первое число: ";
+  std::cin >> a;
+  std::cout << "Введите второе число: ";
+  std::cin >> b;
 
   std::cout << "\n-----Считаем-----\n\n";
 
-  if (score < 0) {
-    std::cout << "Вы ввели неверное число: " << score << "\n\n";
+  if (a == 0) {
+    std::cout << "Вы ввели неверное число: " << a << "\n\n";
+    return 0;
+  } else if (b == 0) {
+    std::cout << "Вы ввели неверное число: " << b << "\n\n";
     return 0;
   }
-  else if (score < 1000) {
-    level = 1;
-  } else if (score < 2500)  {
-    level = 2;
-  } else if (score < 5000) {
-    level = 3;
+
+  res = a % b;
+
+  if (res == 0) {
+    std::cout << "Да, " << a << " делится на " << b << " без остатка!";
   } else {
-    level = 4;
+    std::cout << "Нет, " << a << " не делится на " << b << " без остатка!";
   }
 
-  std::cout << "Ваш уровень: " << level;
   std::cout << std::endl << std::endl;
 
 }
