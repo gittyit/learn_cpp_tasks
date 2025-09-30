@@ -2,27 +2,28 @@
 
 int main() {
 
-  int airSpeed, altitude;
+  int dayInMayNum;
+  std::string dayInMayType;
 
-  std::cout << "Полёт нормальный!\n\n";
-  std::cout << "Введите скорость самолёта: ";
-  std::cin >> airSpeed;
-  std::cout << "Введите высоту: ";
-  std::cin >> altitude;
+  std::cout << "Майские!\n\n";
+  std::cout << "Введите номер дня в мае: ";
+  std::cin >> dayInMayNum;
 
   std::cout << std::endl;
   
-  if (airSpeed <= 0 || altitude <= 0) {
-    if (airSpeed <= 0)
-      std::cout << "неверный параметр <скорость>: " << airSpeed << std::endl;
-    if (altitude <= 0)
-      std::cout << "неверный параметр <высота>: " << altitude << std::endl;
+  if (dayInMayNum < 1 || dayInMayNum > 31) {
+    std::cout << "неверный номер дня: " << dayInMayNum << std::endl << std::endl;
     return 0;
   }
-  else if ((airSpeed > 750 && airSpeed < 850) &&
-     (altitude > 9000 && altitude < 9500))
-     std::cout << "Эшелон правильный.";
-  else std::cout << "Эшелон неверный.";
+  
+  if ((dayInMayNum >= 1 && dayInMayNum <= 10) ||
+      (dayInMayNum >= 13 && dayInMayNum <= 14) ||
+      (dayInMayNum >= 20 && dayInMayNum <= 21) ||
+      (dayInMayNum >= 27 && dayInMayNum <= 28)) {
+    dayInMayType = "выходной";
+  } else dayInMayType = "рабочий";
+  
+  std::cout << dayInMayNum << " мая - это " << dayInMayType << ".";
 
   std::cout << std::endl << std::endl;
 
