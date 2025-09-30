@@ -29,16 +29,24 @@ int main() {
 
   shift = firstDayInMay - 1;
   we11 -= shift; we12 -= shift;
+  if (we11 == 0) we11 = we12;
   we21 -= shift; we22 -= shift;
   we31 -= shift; we32 -= shift;
   we41 -= shift; we42 -= shift;
+  // доп. выходные после сдвига
+  if (shift >= 3) {
+    we51 = we41 + 7;
+    if (we51 < 31) we52 = we42 + 7;
+    else we52 = we51;
+  }
   
   if ((dayInMayNum >= 1 && dayInMayNum <= 5) ||
       (dayInMayNum >= 8 && dayInMayNum <= 10) ||
       (dayInMayNum >= we11 && dayInMayNum <= we12) ||
       (dayInMayNum >= we21 && dayInMayNum <= we22) ||
       (dayInMayNum >= we31 && dayInMayNum <= we32) ||
-      (dayInMayNum >= we41 && dayInMayNum <= we42)) {
+      (dayInMayNum >= we41 && dayInMayNum <= we42) ||
+      shift >= 3 && (dayInMayNum >= we51 && dayInMayNum <= we52)) {
     dayInMayType = "выходной";
   } else dayInMayType = "рабочий";
   
