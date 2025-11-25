@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/soul/devs/learn_cpp_tasks/out/build/mingw/_deps/curl-src/include/curl/curlver.h
+
+C:/Users/soul/devs/learn_cpp_tasks/out/build/mingw/_deps/curl-src/lib/libcurl.rc
+winver.h
+-
+../include/curl/curlver.h
+C:/Users/soul/devs/learn_cpp_tasks/out/build/mingw/_deps/curl-src/include/curl/curlver.h
+
