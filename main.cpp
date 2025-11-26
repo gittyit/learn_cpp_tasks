@@ -18,12 +18,12 @@ void send_request(std::string cmd) {
   link.append(cmd);
   printf("link: %s\n", link.c_str());
   cpr::Url url = cpr::Url(link);
+  cpr::Header hdr = cpr::Header{{"User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0"}};
 
   if (cmd == "get") {
-    r = cpr::Get(url);
+    r = cpr::Get(url, hdr);
   } else if (cmd == "post") {
     r = cpr::Post(url, cpr::Payload{{"key", "new value"}});
-      // cpr::Header{{"Accept", "application/json"}});
   } else if (cmd == "put") {
     r = cpr::Put(url, cpr::Payload{{"key", "new value"}});
   } else if (cmd == "delete") {
