@@ -8,11 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/main.cpp" "CMakeFiles/learn_cpp_tasks.dir/main.cpp.o" "gcc" "CMakeFiles/learn_cpp_tasks.dir/main.cpp.o.d"
+  "/home/vit/cpp_devs/learn_cpp_tasks/main.cpp" "CMakeFiles/learn_cpp_tasks.dir/main.cpp.o" "gcc" "CMakeFiles/learn_cpp_tasks.dir/main.cpp.o.d"
+  "" "learn_cpp_tasks" "gcc" "CMakeFiles/learn_cpp_tasks.dir/link.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

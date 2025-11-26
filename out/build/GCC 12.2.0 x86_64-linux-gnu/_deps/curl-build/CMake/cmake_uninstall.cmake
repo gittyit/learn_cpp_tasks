@@ -21,29 +21,30 @@
 # SPDX-License-Identifier: curl
 #
 ###########################################################################
-if(NOT EXISTS "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/install_manifest.txt")
+if(NOT EXISTS "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: /home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/install_manifest.txt")
 endif()
 
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/install/GCC 12.2.0 x86_64-linux-gnu")
+  set(CMAKE_INSTALL_PREFIX "/home/vit/cpp_devs/learn_cpp_tasks/out/install/GCC 12.2.0 x86_64-linux-gnu")
 endif()
 message(${CMAKE_INSTALL_PREFIX})
 
-file(READ "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/install_manifest.txt" files)
-string(REGEX REPLACE "\n" ";" files "${files}")
-foreach(file ${files})
-  message(STATUS "Uninstalling $ENV{DESTDIR}${file}")
-  if(IS_SYMLINK "$ENV{DESTDIR}${file}" OR EXISTS "$ENV{DESTDIR}${file}")
-    exec_program(
-      "/usr/bin/cmake" ARGS "-E remove \"$ENV{DESTDIR}${file}\""
-      OUTPUT_VARIABLE rm_out
-      RETURN_VALUE rm_retval
-      )
+file(READ "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/install_manifest.txt" _files)
+string(REGEX REPLACE "\n" ";" _files "${_files}")
+foreach(_file ${_files})
+  message(STATUS "Uninstalling $ENV{DESTDIR}${_file}")
+  if(IS_SYMLINK "$ENV{DESTDIR}${_file}" OR EXISTS "$ENV{DESTDIR}${_file}")
+    execute_process(
+      COMMAND "/usr/bin/cmake" -E remove "$ENV{DESTDIR}${_file}"
+      RESULT_VARIABLE rm_retval
+      OUTPUT_QUIET
+      ERROR_QUIET
+    )
     if(NOT "${rm_retval}" STREQUAL 0)
-      message(FATAL_ERROR "Problem when removing $ENV{DESTDIR}${file}")
+      message(FATAL_ERROR "Problem when removing $ENV{DESTDIR}${_file}")
     endif()
   else()
-    message(STATUS "File $ENV{DESTDIR}${file} does not exist.")
+    message(STATUS "File $ENV{DESTDIR}${_file} does not exist.")
   endif()
 endforeach()

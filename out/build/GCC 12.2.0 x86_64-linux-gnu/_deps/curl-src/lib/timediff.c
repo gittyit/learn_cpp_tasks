@@ -44,7 +44,7 @@ struct timeval *curlx_mstotv(struct timeval *tv, timediff_t ms)
 
   if(ms > 0) {
     timediff_t tv_sec = ms / 1000;
-    timediff_t tv_usec = (ms % 1000) * 1000; /* max=999999 */
+    timediff_t tv_usec = (ms % 1000) * 1000; /* max=999000 */
 #ifdef HAVE_SUSECONDS_T
 #if TIMEDIFF_T_MAX > TIME_T_MAX
     /* tv_sec overflow check in case time_t is signed */
@@ -53,7 +53,7 @@ struct timeval *curlx_mstotv(struct timeval *tv, timediff_t ms)
 #endif
     tv->tv_sec = (time_t)tv_sec;
     tv->tv_usec = (suseconds_t)tv_usec;
-#elif defined(WIN32) /* maybe also others in the future */
+#elif defined(_WIN32) /* maybe also others in the future */
 #if TIMEDIFF_T_MAX > LONG_MAX
     /* tv_sec overflow check on Windows there we know it is long */
     if(tv_sec > LONG_MAX)
@@ -84,5 +84,5 @@ struct timeval *curlx_mstotv(struct timeval *tv, timediff_t ms)
  */
 timediff_t curlx_tvtoms(struct timeval *tv)
 {
-  return (tv->tv_sec*1000) + (timediff_t)(((double)tv->tv_usec)/1000.0);
+  return (tv->tv_sec*1000) + (timediff_t)(tv->tv_usec/1000);
 }

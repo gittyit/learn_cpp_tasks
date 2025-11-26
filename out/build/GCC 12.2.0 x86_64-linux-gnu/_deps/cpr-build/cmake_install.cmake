@@ -1,8 +1,8 @@
-# Install script for directory: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-src
+# Install script for directory: /home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/install/GCC 12.2.0 x86_64-linux-gnu")
+  set(CMAKE_INSTALL_PREFIX "/home/vit/cpp_devs/learn_cpp_tasks/out/install/GCC 12.2.0 x86_64-linux-gnu")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,28 +37,34 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
+# Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/zlib-build/cmake_install.cmake")
+  include("/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/zlib-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/cmake_install.cmake")
+  include("/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/cmake_install.cmake")
+  include("/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/include/cmake_install.cmake")
+  include("/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/include/cmake_install.cmake")
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

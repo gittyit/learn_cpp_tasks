@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/learn_cpp_tasks.dir/link.d"
   "CMakeFiles/learn_cpp_tasks.dir/main.cpp.o"
   "CMakeFiles/learn_cpp_tasks.dir/main.cpp.o.d"
   "learn_cpp_tasks"

@@ -1,3 +1,9 @@
+<!--
+Copyright (C) Daniel Stenberg, <daniel@haxx.se>, et al.
+
+SPDX-License-Identifier: curl
+-->
+
 # Items to be removed from future curl releases
 
 If any of these deprecated features is a cause for concern for you, please
@@ -6,32 +12,48 @@ email the
 as soon as possible and explain to us why this is a problem for you and
 how your use case cannot be satisfied properly using a workaround.
 
-## space-separated `NOPROXY` patterns
+## TLS libraries without 1.3 support
 
-When specifying patterns/domain names for curl that should *not* go through a
-proxy, the curl tool features the `--noproxy` command line option and the
-library supports the `NO_PROXY` environment variable and the `CURLOPT_NOPROXY`
-libcurl option.
+curl drops support for TLS libraries without TLS 1.3 capability after May
+2025.
 
-They all set the same list of patterns. This list is documented to be a set of
-**comma-separated** names, but can also be provided separated with just
-space. The ability to just use spaces for this has never been documented but
-some users may still have come to rely on this.
+It requires that a curl build using the library should be able to negotiate
+and use TLS 1.3, or else it is not good enough.
 
-Several other tools and utilities also parse the `NO_PROXY` environment
-variable but do not consider a space to be a valid separator. Using spaces for
-separator is probably less portable and might cause more friction than commas
-do. Users should use commas for this for greater portability.
+As of May 2024, the libraries that need to get fixed to remain supported after
+May 2025 are: BearSSL and Secure Transport.
 
-curl will remove the support for space-separated names in July 2024.
+## msh3 support
 
-## past removals
+The msh3 backed for QUIC and HTTP/3 was introduced in April 2022 but has never
+been made to work properly. It has seen no visible traction or developer
+activity from the msh3 main author (or anyone else seemingly interested) in
+two years. As a non-functional backend, it only adds friction and "weight" to
+the development and maintenance.
+
+Meanwhile, we have a fully working backend in the ngtcp2 one and we have two
+fully working backends in OpenSSL-QUIC and quiche well on their way of ending
+their experimental status in a future.
+
+We remove msh3 support from the curl source tree in July 2025.
+
+## winbuild build system
+
+curl drops support for the winbuild build method after September 2025.
+
+We recommend migrating to CMake. See the migration guide in
+`docs/INSTALL-CMAKE.md`.
+
+## Past removals
 
  - Pipelining
  - axTLS
  - PolarSSL
  - NPN
- - Support for systems without 64 bit data types
+ - Support for systems without 64-bit data types
  - NSS
  - gskit
- - mingw v1
+ - MinGW v1
+ - NTLM_WB
+ - space-separated `NOPROXY` patterns
+ - hyper

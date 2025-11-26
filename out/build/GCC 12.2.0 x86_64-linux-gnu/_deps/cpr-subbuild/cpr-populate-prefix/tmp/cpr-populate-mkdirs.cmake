@@ -1,22 +1,27 @@
 # Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 # file Copyright.txt or https://cmake.org/licensing for details.
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
+# If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
+# existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
+# would cause a fatal error, even though it would be a no-op.
+if(NOT EXISTS "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-src")
+  file(MAKE_DIRECTORY "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-src")
+endif()
 file(MAKE_DIRECTORY
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-src"
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build"
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix"
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/tmp"
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp"
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src"
-  "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp"
+  "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build"
+  "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix"
+  "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/tmp"
+  "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp"
+  "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src"
+  "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-subbuild/cpr-populate-prefix/src/cpr-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

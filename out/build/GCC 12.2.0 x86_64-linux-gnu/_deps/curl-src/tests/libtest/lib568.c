@@ -41,9 +41,9 @@ static char *suburl(const char *base, int i)
 /*
  * Test the Client->Server ANNOUNCE functionality (PUT style)
  */
-int test(char *URL)
+CURLcode test(char *URL)
 {
-  int res;
+  CURLcode res;
   CURL *curl;
   int sdp;
   FILE *sdpf = NULL;
@@ -79,12 +79,17 @@ int test(char *URL)
   stream_uri = NULL;
 
   sdp = open(libtest_arg2, O_RDONLY);
+  if(sdp == -1) {
+    fprintf(stderr, "can't open %s\n", libtest_arg2);
+    res = TEST_ERR_MAJOR_BAD;
+    goto test_cleanup;
+  }
   fstat(sdp, &file_info);
   close(sdp);
 
   sdpf = fopen(libtest_arg2, "rb");
   if(!sdpf) {
-    fprintf(stderr, "can't open %s\n", libtest_arg2);
+    fprintf(stderr, "can't fopen %s\n", libtest_arg2);
     res = TEST_ERR_MAJOR_BAD;
     goto test_cleanup;
   }
@@ -93,6 +98,7 @@ int test(char *URL)
   test_setopt(curl, CURLOPT_READDATA, sdpf);
   test_setopt(curl, CURLOPT_UPLOAD, 1L);
   test_setopt(curl, CURLOPT_INFILESIZE_LARGE, (curl_off_t) file_info.st_size);
+  test_setopt(curl, CURLOPT_VERBOSE, 1L);
 
   /* Do the ANNOUNCE */
   res = curl_easy_perform(curl);

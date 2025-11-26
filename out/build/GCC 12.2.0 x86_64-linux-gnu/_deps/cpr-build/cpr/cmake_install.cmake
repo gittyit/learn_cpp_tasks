@@ -1,8 +1,8 @@
-# Install script for directory: /home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-src/cpr
+# Install script for directory: /home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-src/cpr
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/install/GCC 12.2.0 x86_64-linux-gnu")
+  set(CMAKE_INSTALL_PREFIX "/home/vit/cpp_devs/learn_cpp_tasks/out/install/GCC 12.2.0 x86_64-linux-gnu")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,14 +37,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
+# Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so.1.10.5"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so.1.12.0"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so.1"
       )
     if(EXISTS "${file}" AND
@@ -55,18 +55,18 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/libcpr.so.1.10.5"
-    "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/libcpr.so.1"
+    "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/libcpr.so.1.12.0"
+    "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/libcpr.so.1"
     )
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so.1.10.5"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so.1.12.0"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so.1"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/lib:"
+           OLD_RPATH "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/lib:"
            NEW_RPATH "")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/strip" "${file}")
@@ -76,22 +76,35 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/libcpr.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so"
-         OLD_RPATH "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-build/lib:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcpr.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/libcpr.so")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/cpr/cprTargets.cmake")
+    file(DIFFERENT _cmake_export_file_changed FILES
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/cpr/cprTargets.cmake"
+         "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/CMakeFiles/Export/9cbb545e1300ea60881e0aa5742b2a45/cprTargets.cmake")
+    if(_cmake_export_file_changed)
+      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/cpr/cprTargets-*.cmake")
+      if(_cmake_old_config_files)
+        string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/cpr/cprTargets.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
+        unset(_cmake_old_config_files_text)
+        file(REMOVE ${_cmake_old_config_files})
+      endif()
+      unset(_cmake_old_config_files)
     endif()
+    unset(_cmake_export_file_changed)
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/cpr" TYPE FILE FILES "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/CMakeFiles/Export/9cbb545e1300ea60881e0aa5742b2a45/cprTargets.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/cpr" TYPE FILE FILES "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/CMakeFiles/Export/9cbb545e1300ea60881e0aa5742b2a45/cprTargets-debug.cmake")
   endif()
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/cpr-build/cpr/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

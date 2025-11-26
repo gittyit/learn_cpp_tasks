@@ -62,7 +62,7 @@ struct testcase {
 /* In builds without IPv6 support CURLOPT_RESOLVE should skip over those
    addresses, so we have to do that as well. */
 static const char skip = 0;
-#ifdef ENABLE_IPV6
+#ifdef USE_IPV6
 #define IPV6ONLY(x) x
 #else
 #define IPV6ONLY(x) &skip
@@ -109,14 +109,13 @@ static const struct testcase tests[] = {
 UNITTEST_START
 {
   int i;
-  int testnum = sizeof(tests) / sizeof(struct testcase);
   struct Curl_multi *multi = NULL;
   struct Curl_easy *easy = NULL;
   struct curl_slist *list = NULL;
 
-  for(i = 0; i < testnum; ++i) {
+  for(i = 0; i < (int)CURL_ARRAYSIZE(tests); ++i) {
     int j;
-    int addressnum = sizeof(tests[i].address) / sizeof(*tests[i].address);
+    int addressnum = CURL_ARRAYSIZE(tests[i].address);
     struct Curl_addrinfo *addr;
     struct Curl_dns_entry *dns;
     void *entry_id;

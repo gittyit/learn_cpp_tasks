@@ -22,12 +22,13 @@
 #
 ###########################################################################
 
-SET(VERSIONCHANGE 12)
-SET(VERSIONADD 0)
-SET(VERSIONDEL 8)
+# Keep in sync with CURL_LIBCURL_VERSIONED_SYMBOLS_SONAME in configure.ac
+set(VERSIONCHANGE 12)
+set(VERSIONADD 0)
+set(VERSIONDEL 8)
 
 # libtool version:
-SET(VERSIONINFO -version-info ${VERSIONCHANGE}:${VERSIONADD}:${VERSIONDEL})
+set(VERSIONINFO -version-info ${VERSIONCHANGE}:${VERSIONADD}:${VERSIONDEL})
 # This flag accepts an argument of the form current[:revision[:age]]. So,
 # passing -version-info 3:12:1 sets current to 3, revision to 12, and age to
 # 1.

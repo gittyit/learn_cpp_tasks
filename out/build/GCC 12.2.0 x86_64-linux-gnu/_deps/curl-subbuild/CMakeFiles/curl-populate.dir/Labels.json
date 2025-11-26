@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate-complete.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/CMakeFiles/curl-populate-complete.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-build.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-build.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-configure.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-configure.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-download.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-download.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-install.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-install.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-mkdir.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-patch.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-patch.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-test.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-test.rule"
 		},
 		{
-			"file" : "/home/uhuj/skillbox_cpp/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-update.rule"
+			"file" : "/home/vit/cpp_devs/learn_cpp_tasks/out/build/GCC 12.2.0 x86_64-linux-gnu/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/curl-populate-update.rule"
 		}
 	],
 	"target" : 

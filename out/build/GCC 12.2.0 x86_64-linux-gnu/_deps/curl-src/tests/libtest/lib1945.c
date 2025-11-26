@@ -26,16 +26,13 @@
 
 #include "memdebug.h"
 
-#ifdef _MSC_VER
-/* warning C4706: assignment within conditional expression */
-#pragma warning(disable:4706)
-#endif
 static void showem(CURL *easy, unsigned int type)
 {
   struct curl_header *header = NULL;
   struct curl_header *prev = NULL;
 
-  while((header = curl_easy_nextheader(easy, type, 0, prev))) {
+  /* !checksrc! disable EQUALSNULL 1 */
+  while((header = curl_easy_nextheader(easy, type, 0, prev)) != NULL) {
     printf(" %s == %s (%u/%u)\n", header->name, header->value,
            (int)header->index, (int)header->amount);
     prev = header;
@@ -49,7 +46,7 @@ static size_t write_cb(char *data, size_t n, size_t l, void *userp)
   (void)userp;
   return n*l;
 }
-int test(char *URL)
+CURLcode test(char *URL)
 {
   CURL *easy;
   CURLcode res = CURLE_OK;
@@ -70,12 +67,12 @@ int test(char *URL)
   }
   res = curl_easy_perform(easy);
   if(res) {
-    printf("badness: %d\n", (int)res);
+    printf("badness: %d\n", res);
   }
   showem(easy, CURLH_CONNECT|CURLH_HEADER|CURLH_TRAILER|CURLH_1XX);
 
 test_cleanup:
   curl_easy_cleanup(easy);
   curl_global_cleanup();
-  return (int)res;
+  return res;
 }

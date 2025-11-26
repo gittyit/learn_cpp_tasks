@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
+  ".1"
+  "CMakeFiles/cpr.dir/link.d"
   "CMakeFiles/cpr.dir/accept_encoding.cpp.o"
   "CMakeFiles/cpr.dir/accept_encoding.cpp.o.d"
   "CMakeFiles/cpr.dir/async.cpp.o"
   "CMakeFiles/cpr.dir/async.cpp.o.d"
   "CMakeFiles/cpr.dir/auth.cpp.o"
   "CMakeFiles/cpr.dir/auth.cpp.o.d"
-  "CMakeFiles/cpr.dir/bearer.cpp.o"
-  "CMakeFiles/cpr.dir/bearer.cpp.o.d"
   "CMakeFiles/cpr.dir/callback.cpp.o"
   "CMakeFiles/cpr.dir/callback.cpp.o.d"
   "CMakeFiles/cpr.dir/cert_info.cpp.o"
@@ -58,7 +58,7 @@ file(REMOVE_RECURSE
   "libcpr.pdb"
   "libcpr.so"
   "libcpr.so.1"
-  "libcpr.so.1.10.5"
+  "libcpr.so.1.12.0"
 )
 
 # Per-language clean rules from dependency scanning.

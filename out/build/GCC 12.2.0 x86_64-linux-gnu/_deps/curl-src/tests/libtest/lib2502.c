@@ -23,6 +23,7 @@
  ***************************************************************************/
 #include "test.h"
 
+#include "testtrace.h"
 #include "testutil.h"
 #include "warnless.h"
 #include "memdebug.h"
@@ -31,9 +32,9 @@
 
 #define NUM_HANDLES 4
 
-int test(char *URL)
+CURLcode test(char *URL)
 {
-  int res = 0;
+  CURLcode res = CURLE_OK;
   CURL *curl[NUM_HANDLES] = {0};
   int running;
   CURLM *m = NULL;
@@ -76,10 +77,14 @@ int test(char *URL)
     /* go http2 */
     easy_setopt(curl[i], CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_3ONLY);
     easy_setopt(curl[i], CURLOPT_CONNECTTIMEOUT_MS, (long)5000);
-    easy_setopt(curl[i], CURLOPT_CAINFO, "./certs/EdelCurlRoot-ca.cacert");
+    easy_setopt(curl[i], CURLOPT_CAINFO, libtest_arg4);
     /* wait for first connection established to see if we can share it */
     easy_setopt(curl[i], CURLOPT_PIPEWAIT, 1L);
     /* go verbose */
+    libtest_debug_config.nohex = 1;
+    libtest_debug_config.tracetime = 0;
+    test_setopt(curl[i], CURLOPT_DEBUGDATA, &libtest_debug_config);
+    easy_setopt(curl[i], CURLOPT_DEBUGFUNCTION, libtest_debug_cb);
     easy_setopt(curl[i], CURLOPT_VERBOSE, 1L);
     /* include headers */
     easy_setopt(curl[i], CURLOPT_HEADER, 1L);

@@ -48,15 +48,47 @@ endmacro()
 ####################################################################################
 
 include(CMakeFindDependencyMacro)
-if(ON)
-  find_dependency(OpenSSL 3)
+if("ON")
+  find_dependency(OpenSSL "3")
 endif()
-if(ON)
-  find_dependency(ZLIB 1)
+if("ON")
+  find_dependency(ZLIB "1")
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/CURLTargets.cmake")
-check_required_components("CURL")
 
 # Alias for either shared or static library
-add_library(CURL::libcurl ALIAS CURL::libcurl_shared)
+if(NOT TARGET CURL::libcurl)
+  add_library(CURL::libcurl ALIAS CURL::libcurl_shared)
+endif()
+
+# For compatibility with CMake's FindCURL.cmake
+set(CURL_VERSION_STRING "8.13.0")
+set(CURL_LIBRARIES CURL::libcurl)
+set_and_check(CURL_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include")
+
+set(CURL_SUPPORTED_PROTOCOLS "HTTP;HTTPS;WS;WSS")
+set(CURL_SUPPORTED_FEATURES "alt-svc;AsynchDNS;brotli;HSTS;HTTP2;HTTPS-proxy;IPv6;Largefile;libz;NTLM;PSL;SSL;threadsafe;TLS-SRP;UnixSockets;zstd")
+
+foreach(_item IN LISTS CURL_SUPPORTED_PROTOCOLS CURL_SUPPORTED_FEATURES)
+  set(CURL_SUPPORTS_${_item} TRUE)
+endforeach()
+
+set(_missing_req "")
+foreach(_item IN LISTS CURL_FIND_COMPONENTS)
+  if(CURL_SUPPORTS_${_item})
+    set(CURL_${_item}_FOUND TRUE)
+  elseif(CURL_FIND_REQUIRED_${_item})
+    list(APPEND _missing_req ${_item})
+  endif()
+endforeach()
+
+if(_missing_req)
+  string(REPLACE ";" " " _missing_req "${_missing_req}")
+  if(CURL_FIND_REQUIRED)
+    message(FATAL_ERROR "CURL: missing required components: ${_missing_req}")
+  endif()
+  unset(_missing_req)
+endif()
+
+check_required_components("CURL")
