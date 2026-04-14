@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 int check_holiday_in_may() {
   int dayInMayNum, holiday = 0;
   std::string dayType = "рабочий";
@@ -57,5 +58,7 @@ int main() {
   while(res != -1) {
     res = check_holiday_in_may();
   }
+
+  return 0;
 
 }
