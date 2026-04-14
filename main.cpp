@@ -1,17 +1,30 @@
 #include <iostream>
 
-// 2.5.2
 int main() {
-  int totalAmount = 0, quantity = 10, price = 50, deliveryCost = 30,
-  discount = 40, goodsCost;
 
-  goodsCost = quantity * price;
-  totalAmount = goodsCost + deliveryCost - discount;
+  int dayInMayNum;
+  std::string dayInMayType;
 
-  std::cout << "Калькулятор для расчёта стоимости товара.\n";
-  std::cout << "Стоимость товара: " << goodsCost << "\n";
-  std::cout << "Стоимость доставки: " << deliveryCost << "\n";
-  std::cout << "Скидка: " << discount << "\n";
-  std::cout << "=========================================\n";
-  std::cout << "Полная стоимость товара: " << totalAmount;
+  std::cout << "Майские!\n\n";
+  std::cout << "Введите номер дня в мае: ";
+  std::cin >> dayInMayNum;
+
+  std::cout << std::endl;
+  
+  if (dayInMayNum < 1 || dayInMayNum > 31) {
+    std::cout << "неверный номер дня: " << dayInMayNum << std::endl << std::endl;
+    return 0;
+  }
+  
+  if ((dayInMayNum >= 1 && dayInMayNum <= 10) ||
+      (dayInMayNum >= 13 && dayInMayNum <= 14) ||
+      (dayInMayNum >= 20 && dayInMayNum <= 21) ||
+      (dayInMayNum >= 27 && dayInMayNum <= 28)) {
+    dayInMayType = "выходной";
+  } else dayInMayType = "рабочий";
+  
+  std::cout << dayInMayNum << " мая - это " << dayInMayType << ".";
+
+  std::cout << std::endl << std::endl;
+
 }
