@@ -1,57 +1,94 @@
 #include <iostream>
 
-int main() {
 
-  int dayInMayNum, firstDayInMay;
-  std::string dayInMayType;
-  int we11 = 6, we12 = 7;
-  int we21 = 13, we22 = 14;
-  int we31 = 20, we32 = 21;
-  int we41 = 27, we42 = 28;
-  int we51 = 0, we52 = 0;
-  int shift = 0;
+int check_holiday_in_may() {
+  int dayInMayNum, holiday = 0, firstDay=0;
+  std::string dayType = "рабочий";
 
-  std::cout << "Майские — усложнение\n\n";
-  std::cout << "Введите номер дня в Мае: ";
-  std::cin >> dayInMayNum;
-  std::cout << "Введите номер дня недели, с которого начинается месяц в Мае: ";
-  std::cin >> firstDayInMay;
+  std::cout << "Майские!\n\n";
+  std::cout << "Укажите номер дня недели начала мая: (0 - для выхода) ";
+  std::cin >> firstDay;
   std::cout << std::endl;
+
+  if(firstDay == 0) {
+    return -1;
+  }
+  else if (firstDay < 1 || firstDay > 7) {
+    std::cout << "неверный номер дня недели: " << firstDay << ". верный от 1 до 7 включительно.\n";
+    std::cout << std::endl;
+    return 0;
+  }
   
-  if ((dayInMayNum < 1 || dayInMayNum > 31) ||
-      (firstDayInMay < 1 || firstDayInMay > 7)) {
-    if (dayInMayNum < 1 || dayInMayNum > 31)
-      std::cout << "неверный номер дня: " << dayInMayNum << "\n";
-    if (firstDayInMay < 1 || firstDayInMay > 7)
-      std::cout << "неверный номер дня недели начала мая: " << firstDayInMay << "\n";
+  std::cout << "Введите номер дня в мае: (0 - для выхода) ";
+  std::cin >> dayInMayNum;
+  if(dayInMayNum == 0)
+    return -1;
+
+  std::cout << std::endl;
+
+  if (dayInMayNum < 1 || dayInMayNum > 31) {
+    std::cout << "неверный номер дня: " << dayInMayNum << std::endl << std::endl;
     return 0;
   }
 
-  shift = firstDayInMay - 1;
-  we11 -= shift; we12 -= shift;
-  if (we11 == 0) we11 = we12;
-  we21 -= shift; we22 -= shift;
-  we31 -= shift; we32 -= shift;
-  we41 -= shift; we42 -= shift;
-  // доп. выходные после сдвига
-  if (shift >= 3) {
-    we51 = we41 + 7;
-    if (we51 < 31) we52 = we42 + 7;
-    else we52 = we51;
+  // смещение для выходных
+  int offset = firstDay - 1;
+
+  // проверка праздничных
+  if ( (dayInMayNum  >= 1 && dayInMayNum <= 5) ||
+       (dayInMayNum >= 8 && dayInMayNum <= 10) ) {
+    holiday = 1;
+  // проверка выходных со смещением
+  } else if ( (dayInMayNum >= (6 - offset) && dayInMayNum <= (7 - offset)) ||
+    (dayInMayNum >= (13 - offset) && dayInMayNum <= (14 - offset)) ||
+    (dayInMayNum >= (20 - offset) && dayInMayNum <= (21 - offset)) ||
+    (dayInMayNum >= (27 - offset) && dayInMayNum <= (28 - offset)) ) {
+    holiday = 1;
   }
-  
-  if ((dayInMayNum >= 1 && dayInMayNum <= 5) ||
-      (dayInMayNum >= 8 && dayInMayNum <= 10) ||
-      (dayInMayNum >= we11 && dayInMayNum <= we12) ||
-      (dayInMayNum >= we21 && dayInMayNum <= we22) ||
-      (dayInMayNum >= we31 && dayInMayNum <= we32) ||
-      (dayInMayNum >= we41 && dayInMayNum <= we42) ||
-      shift >= 3 && (dayInMayNum >= we51 && dayInMayNum <= we52)) {
-    dayInMayType = "выходной";
-  } else dayInMayType = "рабочий";
-  
-  std::cout << dayInMayNum << " мая - это " << dayInMayType << ".";
+
+  if (holiday == 1) {
+    dayType = "выходной";
+  }
+
+  std::cout << dayInMayNum << " мая - это " << dayType << ".";
 
   std::cout << std::endl << std::endl;
+  return 0;
+}
+
+int main() {
+  int res = 0;
+
+  // пн вт  ср чт пт сб вс
+  // *1 *2  *3 *4 *5  6  7
+  // *8 *9 *10 11 12 13 14
+  // 15 16  17 18 19 20 21
+  // 22 23  24 25 26 27 28
+  // 29 30  31
+
+  // пн вт ср чт  пт  сб вс
+  //    *1 *2 *3  *4  5  6
+  //  7 *8 *9 *10 11 12 13
+  // 14 15 16  17 18 19 20
+  // 21 22 23  24 25 26 27
+  // 28 29 30  31
+
+  // пн вт ср чт  пт сб вс
+  //       *1 *2  *3  4  5
+  //  6  7 *8 *9 *10 11 12
+  // 13 14 15 16  17 18 19
+  // 20 21 22 23  24 25 26
+  // 27 28 29 30  31
+
+  // Выходные:
+  // - все субботы и воскресенья
+  // - даты с 1 по 5 и с 8 по 10 мая включительно. 
+  // Ввести день недели с которого начинается месяц.
+
+  while(res != -1) {
+    res = check_holiday_in_may();
+  }
+
+  return 0;
 
 }
